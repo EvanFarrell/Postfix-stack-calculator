@@ -39,6 +39,15 @@ public class StackReferenceBased{
     for (int i = 0; i < items; i++){
         StackItem returnVal = pop();
     }
-
   }
+
+  public String toString(){
+    String retString = new String("");
+    for (StackItem curr = peek(); curr != null; curr = curr.getLowerItem()){
+      retString += ("[" + Character.toString(curr.getValue()) + "]\n");
+    }
+    return retString;
+  }
+
+
 }

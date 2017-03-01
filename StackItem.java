@@ -6,11 +6,8 @@ public class StackItem {
 
   public StackItem (char value){
     this.value = value;
-    lowerItem = null;
   }
   public StackItem (){
-    value = (Character) null;
-    lowerItem = null;
   }
 
   public char getValue(){
