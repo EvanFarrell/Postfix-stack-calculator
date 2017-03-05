@@ -19,9 +19,15 @@ public class StackReferenceBased{
   }
 
   public StackItem pop(){
+    StackItem retTop = top;
     top = top.getLowerItem();
     items--;
-    return top;
+    return retTop;
+  }
+
+  public void popNoReturn(){
+    top = top.getLowerItem();
+    items--;
   }
 
   public StackItem peek(){
